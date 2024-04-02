@@ -1,20 +1,19 @@
 import streamlit as st
-from app_pages.multipage import MultiPage
+from app_pages.dashboard import DashBoard
 
-# load pages scripts
-from app_pages.summary import summary_body
-from app_pages.leaves_visualizer import leaves_visualizer_body
-from app_pages.mildew_detector import powdery_mildew_detector_body
-from app_pages.project_hypothesis import project_hypothesis_body
-from app_pages.ml_performance import ml_performance_metrics
+from app_pages.exec_summary import exec_summary_content
+from app_pages.leaf_comparison import leaf_comparison_content
+from app_pages.mildew_detector import mildew_detector_content
+from app_pages.ml_metrics import ml_metrics_content
+from app_pages.project_hypothesis import project_hypothesis_content
 
-app = MultiPage(app_name="Cherry Powdery Mildew detector")  # Create an instance of the app
+app = DashBoard(app_name="Mildew Detection in Cherry Leaves")
 
-# Add your app pages here using .add_page()
-app.add_page("Quick Project Summary", page_summary_body)
-app.add_page("Leaves Visualiser", page_leaves_visualizer_body)
-app.add_page("Powdery Mildew detector", page_powdery_mildew_detector_body)
-app.add_page("Project Hypothesis", page_project_hypothesis_body)
-app.add_page("ML Performance Metrics", page_ml_performance_metrics)
+                
+app.add_page("Executive Summary", exec_summary_content)
+app.add_page("Leaf Comparison Vizualizer", leaf_comparison_content)
+app.add_page("Mildew Detection", mildew_detector_content)
+app.add_page("ML Metrics", ml_metrics_content)
+app.add_page("Project Hypothesis", project_hypothesis_content)
 
-app.run()  # Run the app
+app.run()
