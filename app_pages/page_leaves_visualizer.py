@@ -14,26 +14,20 @@ def page_leaves_visualizer_body():
     st.write("### Leaf Comparison")
     st.info(
         f"* The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew."
-        
+    
     )
     version = 'v1'
     if st.checkbox("Difference betweeen average image and variability image"):
         av_healthy = plt.imread(f"outputs/{version}/v1ag_var_healthy.png")
         av_mildew = plt.imread(f"outputs/{version}/v1ag_var_powdery_mildew.png")
-        
-        st.warning(
-            f"Test warning text."
-        )
-        
+
         st.image(av_healthy, caption='Healthy Leaf - Average and Variability')
         st.image(av_mildew, caption='Infected Leaf - Average and Variability')
         st.write("---")
         
     if st.checkbox("Differences between Healthy and Infected Leaves."):
         av_diff = plt.imread(f"outputs/{version}/avg_diff.png")
-        st.warning(
-            f"Test warning text."
-        )
+
         st.image(av_diff, caption='Difference between average images')
         
     if st.checkbox("Image Montage"):
@@ -96,3 +90,4 @@ def image_montage(dir_path, display_label, nrows, ncols, figsize=(15,10)):
         print(f"The existing options are: {labels}")
         
         
+
