@@ -11,7 +11,7 @@ from src.machine_learning.predictive_analysis import (
                                                     )
 
 
-def mildew_detector_content():
+def page_powdery_mildew_detector_body():
     """
     Contents of Mildew Detector
     """

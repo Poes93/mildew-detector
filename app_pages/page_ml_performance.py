@@ -2,10 +2,11 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.image import imread
+from src.machine_learning.evaluate_clf import load_test_evaluation
 from src.machine_learning.evaluate import load_test_evaluation
 
 
-def ml_metrics_content():
+def page_ml_performance_metrics():
     """Contents of ML Metrics"""
     st.write("### ML Metrics")
     version = 'v1'

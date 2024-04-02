@@ -1,7 +1,8 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 
 
-def project_hypothesis_content():
+def page_project_hypothesis_body():
     """Contents of Project Hypothesis"""
     st.write("### Project Hypothesis")
     st.info(

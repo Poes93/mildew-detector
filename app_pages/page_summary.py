@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def exec_summary_content():
+def page_summary_body():
     """Contents of Exec Summary"""
     st.write("### Executive Summary")
     st.info(

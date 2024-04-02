@@ -9,7 +9,7 @@ from matplotlib.image import imread
 import itertools
 import random
 
-def leaf_comparison_content():
+def page_leaves_visualizer_body():
     """Contents of Leaf Comparison"""
     st.write("### Leaf Comparison")
     st.info(
