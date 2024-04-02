@@ -18,8 +18,8 @@ def page_leaves_visualizer_body():
     )
     version = 'v1'
     if st.checkbox("Difference betweeen average image and variability image"):
-        av_healthy = plt.imread(f"outputs/{version}/v1ag_var_healthy.png")
-        av_mildew = plt.imread(f"outputs/{version}/v1ag_var_powdery_mildew.png")
+        av_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
+        av_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
 
         st.image(av_healthy, caption='Healthy Leaf - Average and Variability')
         st.image(av_mildew, caption='Infected Leaf - Average and Variability')
