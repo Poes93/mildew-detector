@@ -1,5 +1,6 @@
 import streamlit as st
 from app_pages.dashboard import DashBoard
+from app_pages.ml_metrics import ml_metrics_content
 
 from app_pages.exec_summary import exec_summary_content
 from app_pages.leaf_comparison import leaf_comparison_content
