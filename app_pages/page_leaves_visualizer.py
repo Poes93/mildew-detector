@@ -3,11 +3,11 @@ import os
 import pandas as pd
 import numpy as np
 import seaborn as sns
+import itertools
+import random
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
 
-import itertools
-import random
 
 def page_leaves_visualizer_body():
     """Contents of Leaf Comparison"""
@@ -94,6 +94,5 @@ def image_montage(dir_path, display_label, nrows, ncols, figsize=(15,10)):
     else:
         print("The label you selected doesn't exist.")
         print(f"The existing options are: {labels}")
-        
         
         
