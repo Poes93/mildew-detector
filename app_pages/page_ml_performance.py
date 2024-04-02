@@ -34,7 +34,7 @@ def page_ml_performance_metrics():
     st.write("## Model History")
     st.write("### Loss and Accuracy over Epochs")
     history_data_path = f"outputs/{version}/model_loss_acc.png"
-    st.image(history_data_path, caption='Model Loss and Accuracy over Epochs')
+    st.image(history_data_path)
     plt.figure(figsize=(8, 5))
     columns_to_plot = ['loss', 'val_loss', 'accuracy', 'val_accuracy']
     history_data[columns_to_plot].plot(ax=plt.gca(), style='.-')

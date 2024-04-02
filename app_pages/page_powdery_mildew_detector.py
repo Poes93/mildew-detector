@@ -24,7 +24,7 @@ def page_powdery_mildew_detector_body():
 
     st.write(
         f"* You can download a set of healthy and uninfected cells for live prediction. "
-        f"You can download the images from [here](https://www.kaggle.com/ccodeinstitute/cherry-leaves)"
+        f"You can download the images from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)"
         )
 
     st.write("---")

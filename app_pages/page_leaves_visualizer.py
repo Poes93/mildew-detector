@@ -32,7 +32,7 @@ def page_leaves_visualizer_body():
         
     if st.checkbox("Image Montage"):
         st.write("* To update the montage, please click 'Update Montage'")
-        my_data_dir = 'inputs/cherry-leaves_dataset/cherry-leaves'
+        my_data_dir = 'inputs/cherryleaves_dataset/cherry-leaves'
         labels = os.listdir(my_data_dir + '/validation')
         display_label = st.selectbox(
             label="Choose label", options=labels, index=0
