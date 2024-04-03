@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
 
 st.write("### ML Metrics")
@@ -27,10 +26,3 @@ st.write("### Loss and Accuracy over Epochs")
 history_data_path = f"outputs/{version}/model_loss_acc.png"
 history_image = plt.imread(history_data_path)
 st.image(history_image, caption='Loss and Accuracy over Epochs')
-plt.figure(figsize=(8, 5))
-columns_to_plot = ['loss', 'val_loss', 'accuracy', 'val_accuracy']
-history_data[columns_to_plot].plot(ax=plt.gca(), style='.-')
-plt.xlabel('Epochs')
-plt.ylabel('Metrics')
-plt.title('Model Loss and Accuracy over Epochs')
-st.pyplot(plt)
