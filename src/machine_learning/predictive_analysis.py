@@ -51,9 +51,9 @@ def load_model_and_predict(new_image, version):
 
     pred_prob = model.predict(new_image)[0, 0]
 
-    target_map = {v: k for k, v in {'Healthy': 0, 'Powdery Mildew': 1}.items()}
+    target_map = {v: k for k, v in {'Powdery Mildew': 0, 'Healthy': 1}.items()}
     pred_class = target_map[pred_prob > 0.5]
-    if pred_class == target_map[0]:
+    if pred_class == target_map['Healthy']:  # Adjusted logic here
         pred_prob = 1 - pred_prob
 
     st.write(
