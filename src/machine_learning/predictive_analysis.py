@@ -63,6 +63,3 @@ def load_model_and_predict(new_image, version):
 
     return pred_prob, pred_class
 
-
-the code returns the different answer, when providing a healthy it displays infected
-
