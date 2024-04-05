@@ -51,10 +51,9 @@ def load_model_and_predict(new_image, version):
 
     pred_prob = model.predict(new_image)[0, 0]
 
-    target_map = {0: 'Powdery Mildew', 1: 'Healthy'}
-    pred_class = target_map[int(pred_prob > 0.5)]
-
-    if pred_class == 'Powdery Mildew':
+    target_map = {v: k for k, v in {'Healthy': 0, 'Powdery Mildew': 1}.items()}
+    pred_class = target_map[pred_prob > 0.5]
+    if pred_class == target_map[0]:
         pred_prob = 1 - pred_prob
 
     st.write(
@@ -63,4 +62,7 @@ def load_model_and_predict(new_image, version):
     )
 
     return pred_prob, pred_class
+
+
+the code returns the different answer, when providing a healthy it displays infected
 
