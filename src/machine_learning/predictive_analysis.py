@@ -63,10 +63,17 @@ def load_model_and_predict(new_image, version):
     if pred_class == 'Healthy':
         pred_prob = 1 - pred_prob
 
-    st.write(
-        f"The predictive analysis indicates the sample leaf is "
-        f"**{pred_class.lower()}** with powdery mildew."
-    )
+    # Adjust the output text based on the predicted class
+    if pred_class == 'Healthy':
+        st.write(
+            f"The predictive analysis indicates the sample leaf is "
+            f"**{pred_class.lower()}**."
+        )
+    else:
+        st.write(
+            f"The predictive analysis indicates the sample leaf is "
+            f"**{pred_class.lower()}** with powdery mildew."
+        )
 
     return pred_prob, pred_class
 
