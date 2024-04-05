@@ -47,7 +47,7 @@ def load_model_and_predict(new_image, version):
     Load and perform ML prediction over live images
     """
 
-    model = load_model(f"outputs/{version}/mildew_detection_model.h5")
+    model = load_model(f"outputs/{version}/mildew_detector_model.h5")
 
     pred_prob = model.predict(new_image)[0, 0]
 
