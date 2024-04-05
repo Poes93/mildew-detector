@@ -5,13 +5,36 @@
 * Comprising over four thousand images from the client’s agricultural fields, the dataset showcases cherry leaves in healthy condition as well as those afflicted with powdery mildew. This fungal disease impacts a wide range of plants and is of particular concern for the cherry crop, a premium offering in the company’s product line. The potential delivery of substandard quality produce to the market is a significant concern for the company.
 
 ## Business Requirements
-Farmy & Foods is encountering a significant challenge with their cherry plantation crop as powdery mildew has become a prevalent issue. Currently, the inspection process relies on manual verification, wherein an employee spends approximately 30 minutes per tree collecting leaf samples and visually inspecting them for signs of powdery mildew. If the disease is detected, the employee administers a specific compound to eradicate the fungus, taking an additional minute per tree. However, with thousands of cherry trees spread across various farms nationwide, this manual approach proves impractical due to its lack of scalability.
+Farmy & Foods, a prominent player in the agricultural sector, approached us with a specific request: to design a Machine Learning-powered system capable of swiftly identifying powdery mildew in cherry trees. The system needed to analyze tree leaf images instantly, distinguishing between healthy and affected trees, thus indicating the necessity for fungicide treatment. This request arose from Farmy & Food's recognition of the inefficiency of their current manual detection process. With thousands of cherry trees distributed across numerous farms throughout the country, the manual inspection procedure was proving to be non-scalable due to its time-intensive nature.
 
-In a bid to streamline this cumbersome process, the IT department has proposed implementing a machine learning (ML) system capable of instantly identifying the presence of powdery mildew in cherry trees using leaf images. Success in this endeavor could pave the way for similar initiatives aimed at detecting pests in other crops. Farmy & Foods has provided a dataset comprising cherry leaf images from their plantations to facilitate the development of this ML system.
+### Business Requirement 1: Data Visualization
 
-* 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-* 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+* The primary focus here was to provide the client with visually intuitive tools to differentiate between healthy and powdery mildew-affected cherry leaves.
 
+- As a client, my priority is to effortlessly navigate an interactive dashboard, facilitating clear comprehension of the presented data.
+- As a client, I require the display of "mean" and "standard deviation" images for both healthy and powdery mildew-infected cherry leaves, aiding in visual differentiation.
+- As a client, I seek to visualize the disparity between an average healthy cherry leaf and one affected by powdery mildew, enhancing my ability to distinguish between the two.
+- As a client, I aim to view an image montage featuring both healthy cherry leaves and those affected by powdery mildew, enabling easier visual differentiation.
+
+### For further insights into the importance and functionality, refer to Hypothesis 1
+
+Addressing these user stories involved the implementation of specific tasks, as detailed in the streamlit dashboard and Data Visualization notebook:
+
+Development of a Streamlit-based dashboard with a user-friendly navigation sidebar (refer to Dashboard design for specifics).
+Calculation and depiction of the distinction between average healthy and infected cherry leaves.
+Visualization of "mean" and "standard deviation" images for both healthy and powdery mildew-infected leaves.
+Creation of an image montage for comparative analysis of infected and healthy leaves.
+
+### Business Requirement 2: Classification
+This requirement centers on accurately identifying whether a given cherry leaf is infected with powdery mildew.
+
+- As a client, I require an ML model capable of predicting leaf health with a minimum accuracy of 86%.
+
+* To fulfill these user stories, the following tasks were undertaken, as showcased in the streamlit dashboard and Data Visualization notebook:
+
+- Presentation of the rationale behind the deployed ML model, outlined here.
+- Implementation of an uploader widget on the dashboard, enabling clients to upload cherry leaf images for instant evaluation.
+- Specifications include uploading images in .jpeg format, supporting multiple uploads up to 200MB, and displaying uploaded images alongside their corresponding prediction statements. These statements indicate the presence of powdery mildew infection and associated probability.
 
 ## Hypothesis 
 * 1 - It is anticipated that the visual distinctions between cherry leaves affected by powdery mildew and those that are not will be significant enough to effectively train an image-based machine learning model.
@@ -22,7 +45,6 @@ In a bid to streamline this cumbersome process, the IT department has proposed i
 * 1 - The dataset will undergo analysis through testing, training, and validation methods to evaluate the accuracy of image recognition.
 * 2 - The validation process will be visualized on the dashboard for easy review.
 * 3 - The dashboard will feature functionality for uploading images to assess the presence of infection.
-
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 * **Business Requirement 1**: Data Visualization 
@@ -47,7 +69,6 @@ In a bid to streamline this cumbersome process, the IT department has proposed i
 	* Train data - target: infected or not; features: all images.
 
 
-## Dashboard Design
 ## Dashboard Design (Streamlit App User Interface)
 
 ### Page 1: Quick Project Summary
@@ -89,7 +110,32 @@ In a bid to streamline this cumbersome process, the IT department has proposed i
     * Model evaluation result
 
 ## Unfixed Bugs
-* 
+
+
+# Mapping Business Requirements to Data Visualizations and ML Tasks
+
+The alignment of business requirements with data visualizations and machine learning (ML) tasks involved a systematic approach, where each requirement was dissected into user stories and subsequently translated into corresponding ML tasks. It's noteworthy that thorough manual testing ensured the functionality of all tasks.
+
+## Business Requirement 1: Data Visualization
+The primary objective here was to provide the client with visual insights into distinguishing between cherry leaves affected by powdery mildew and healthy ones.
+
+### User Stories:
+
+Interactive Dashboard Navigation: Clients seek an intuitive interface to navigate effortlessly through the data.
+Display of Mean and Standard Deviation Images: Visualization of statistical metrics aids in visually differentiating cherry leaves.
+Comparison of Healthy and Infected Cherry Leaves: Clients require a clear depiction of the disparity between healthy and powdery mildew-infected cherry leaves.
+Image Montage for Comparison: A visual montage facilitates the differentiation between healthy and infected cherry leaves.
+For further insights into the importance and functionality of these features, refer to Hypothesis 1.
+
+## Addressing these user stories involved the implementation of various tasks, which are showcased in a Streamlit dashboard and calculated within the Data Visualization notebook:
+
+Development of a Streamlit-based dashboard featuring an intuitive sidebar for navigation.
+Calculation and display of the difference between average infected and healthy leaves.
+Visualization of mean and standard deviation images for both healthy and infected leaves.
+Creation of image montages for comparison purposes.
+Business Requirement 2: Classification
+This requirement aimed at enabling the client to determine whether a given cherry leaf is affected by powdery mildew or not.
+
 
 ## Deployment
 ### Heroku
@@ -102,6 +148,10 @@ In a bid to streamline this cumbersome process, the IT department has proposed i
 3. Select your repository name and click Search. Once it is found, click Connect.
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+
+### Languages
+- [Python](https://www.python.org/)
+- [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 
 ## Main Data Analysis and Machine Learning Libraries
