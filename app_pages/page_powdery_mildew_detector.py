@@ -13,7 +13,7 @@ from src.machine_learning.predictive_analysis import (
 
 def page_powdery_mildew_detector_body():
     st.info(
-        f"* The client is interested in determining whether a given cell contains a malaria parasite or not, or if it's infected with powdery mildews"
+        f"* The client is interested in determining whether a leaf is infected with powdery mildews or not"
     )
 
     st.write(
