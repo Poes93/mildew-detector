@@ -71,8 +71,8 @@ def load_model_and_predict(new_image, version):
         )
     else:
         st.write(
-            f"The predictive analysis indicates the sample leaf is "
-            f"**{pred_class.lower()}** with powdery mildew."
+            f"The predictive analysis indicates the sample leaf is infected with "
+            f"**{pred_class.lower()}**."
         )
 
     return pred_prob, pred_class
